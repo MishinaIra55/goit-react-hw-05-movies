@@ -1,22 +1,24 @@
 import {  Outlet } from 'react-router-dom';
-import { StyledNavLink } from './Layout.styled';
+import { StyledNavLink, StyledHeader, StyledList } from './Layout.styled';
+// import { StyledList } from '../../pages/HomePage/HomePage.styled';
 
 export const Layout = () => {
   return(
     <>
-      <header>
-        <nav>
+      <StyledHeader>
+        <StyledList>
           <li>
             <StyledNavLink to='/'>Home</StyledNavLink>
           </li>
           <li>
             <StyledNavLink to='/movies'>Movies</StyledNavLink>
           </li>
-        </nav>
-      </header>
+        </StyledList>
+      </StyledHeader>
       <main>
-        <Outlet/>
+
       </main>
+      <Outlet/>
     </>
   )
  }

@@ -23,7 +23,7 @@ export const HomePage = () => {
     <div>
       <h1>Trending today</h1>
       <StyledList>
-        {movies?.map(({id, title })=> (
+        {movies.map(({id, title })=> (
           <MovieItem key={ id} id={id} title={title}/>
         ))}
       </StyledList>
