@@ -25,7 +25,7 @@ export const getTrendingMovies = async () => {
        language: 'en-US',
      },
    })
-   const { title, poster_path, vote_average, overview, genres } =data;
+   const { title, poster_path, vote_average, overview, genres } = data;
 
    return({ title, poster_path, vote_average, overview, genres });
  }
