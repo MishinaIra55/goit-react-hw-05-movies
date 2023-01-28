@@ -1,7 +1,6 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useFetchMovie } from '../../hooks/useFetchMovie/useFetchMovie';
-import { Container, StyledButton, StyledList } from '../Movies/Movies.styled';
-import { StyledNavLink, Wrapper } from './MoviePageDetails.styled';
+import { StyledNavLink, Wrapper,Container, StyledButton, StyledList} from './MoviePageDetails.styled';
 import { imageSrc } from '../../services/image.service';
 
 
@@ -19,7 +18,7 @@ export const MoviePageDetails =() => {
         type="button"
         onClick={() => navigate(location?.state?.from ?? '/')}
       >
-        &#8656; Go back
+        Go back
       </StyledButton>
       {movie && (
         <Wrapper>

@@ -30,7 +30,18 @@ export const getTrendingMovies = async () => {
    return({ title, poster_path, vote_average, overview, genres });
  }
 
- export const getMoviesReviews = async movieId => {
+export const getMovieCast = async movieId => {
+  const { data } = await moviesGetApi.get(`movie/${movieId}/credits`, {
+    params: {
+      api_key: KEY,
+      language: 'en-US',
+    },
+  });
+  return data.cast;
+};
+
+
+export const getMoviesReviews = async movieId => {
    const {data} = await moviesGetApi.get(`movie/${movieId}/reviews`,{
    params: {
      api_key: KEY,
